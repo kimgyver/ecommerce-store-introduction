@@ -1,0 +1,104 @@
+# Ecommerce Platform Progress & Key Features
+
+---
+
+## Project Overview
+
+The Ecommerce Platform is a new shopping website designed for both B2B (distributors) and B2C (general customers). Each distributor can operate an independent online store with their own brand and domain, while general customers can conveniently purchase products as well.
+
+---
+
+## Key Features
+
+### 1. Automatic Customer Type Recognition
+
+- When a user logs in, their email domain is used to automatically distinguish between distributor and general customer.
+- Distributor customers receive custom pricing, discounts, and exclusive services.
+- General customers purchase at standard prices.
+
+### 2. Custom Pricing & Discounts
+
+- Each distributor can have different prices and discount rates.
+- Additional discounts are available for bulk purchases.
+- All pricing policies are managed directly by the admin.
+
+### 3. Order & Quote System
+
+- Sales reps can quickly request quotes using the input UI on the product detail page.
+- Official orders (PO) are created directly from the cart, and order details and status can be checked on the admin.
+- Automatic email notifications are sent after orders.
+
+### 4. Payment Methods
+
+- General customers pay instantly via credit card (Stripe).
+- Distributor customers can use 30-day deferred payment (invoice) as well.
+
+### 5. White-label (Branded Storefronts)
+
+- Each distributor can operate their store with their own domain and branding (logo, color).
+- Even for the same product, price, discount, and design may differ by distributor.
+- Example: chromet.com/shop → Chromet branding, pizazzstore.com → Pizazz branding
+
+### 6. Admin
+
+- Distributors and admins can easily manage orders, sales, payments, products, and settings from their respective admin.
+- All orders, quotes, and payment history are visible at a glance.
+
+### 7. Automated Email Notifications
+
+- Automatic emails are sent for all major events such as orders, quotes, and shipping.
+- Payment due reminders are also sent automatically.
+
+### 8. Security & Role-based Access
+
+- All users log in securely, and access permissions are set according to their role.
+- Distributor staff, admins, and general customers each see only the features they need.
+
+---
+
+## Progress Status (as of Jan 2026)
+
+- **Basic login/user management:** Complete
+- **Product registration & pricing management:** Complete
+- **Distributor-specific pricing/discounts:** Complete
+- **Cart & order creation:** Complete
+- **Quote requests & email notifications:** Complete
+- **Stripe credit card payment:** Complete
+- **30-day deferred payment (for distributors):** Partially implemented, in testing
+- **White-label (branded storefronts):** Partially implemented; brand/domain routing & admin UI complete, auto-design application & distributor admin features planned
+- **Automated email system:** Automatic emails for **B2B events** (PO/purchase orders and Quote requests) and B2C order/shipping notifications are now fully implemented. Template standardization and additional features are in progress.
+- **Admin:** Order/sales/product management implemented, more analytics & admin features planned
+
+---
+
+## Next Steps
+
+- Add independent admin features for each distributor (manage their own products/orders/users/branding)
+- Enhance automatic brand/design application
+- Enhance quote order process
+- Expand dashboard analytics & management features
+- Further improve operations, security, and user experience (UX)
+
+---
+
+## Frequently Asked Questions
+
+**Q. Can we operate our own branded online store?**
+
+- Yes, each distributor can operate an independent store with their own domain, logo, and brand color.
+
+**Q. Are bulk discounts or custom pricing available?**
+
+- Yes, each distributor can set their own custom pricing and bulk discount policies.
+
+**Q. How do we receive order/quote/shipping notifications?**
+
+- Automatic email notifications are sent for all major events.
+
+**Q. What payment methods are supported?**
+
+- General customers pay by credit card, while distributors can use 30-day deferred payment and other options.
+
+---
+
+If you have any questions, please feel free to contact us!

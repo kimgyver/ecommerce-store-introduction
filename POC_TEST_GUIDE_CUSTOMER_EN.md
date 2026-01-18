@@ -1,0 +1,104 @@
+# Ecommerce Platform PoC System Test Guide
+
+---
+
+## Purpose of Testing
+
+This guide helps you experience the main features of the Ecommerce Platform PoC. Potential customers can test the website in various roles (general user, distributor, admin).
+
+---
+
+## Test Site URLs
+
+- **PoC Demo Site (Frontend):**  
+  https://ecommerce-store-ten-jet.vercel.app
+
+- **Admin Site:**
+  https://ecommerce-store-ten-jet.vercel.app/admin
+
+---
+
+## Test Account Information
+
+### 1. Admin Account
+
+- Email: admin@test.com
+- Password: admin123
+
+### 2. Distributor Accounts
+
+- Email: john@chromet.com (Chromet Inc.)
+- Password: dist123
+- Email: sarah@abcdist.com (ABC Distribution Co.)
+- Password: dist123
+
+### 3. General User Account
+
+- Email: customer@test.com
+- Password: cust123
+
+> **You can also create a new account!**
+>
+> - Use the sign up/login page to register with your own email and password, and try out different roles.
+
+---
+
+## Key Test Scenarios
+
+> **To test both frontend (user) and admin at the same time:**
+>
+> - Only one account can be logged in per browser session.
+> - To test both at once, use a different browser or a private/incognito window for each.
+
+### [Common] Sign Up & Login
+
+- Click the login/sign up button at the top right to create a new account or log in with the test accounts above.
+
+### 1. General User Experience
+
+- Browse products, add to cart, and proceed to checkout.
+- Try the Stripe credit card payment flow (test cards supported).
+- Check order history, request quotes, and experience automated email notifications.
+
+### 2. Distributor Experience
+
+- Log in as a distributor to see custom pricing, discounts, and a dedicated dashboard.
+- Test B2B features like bulk discounts, 30-day deferred payment (PO), and quote requests.
+- You can request a quote directly from the input UI located in the middle of each product detail page.
+- Branding (logo/color) per distributor is implemented, but actual application is based on subdomain routing.
+- Since the PoC demo site uses a single domain, automatic brand design application cannot be directly experienced.
+
+### 3. Admin Experience
+
+- Log in as admin to manage all orders, users, products, distributors, pricing, and branding.
+- Explore advanced features like white-label management, distributor pricing/discount/domain settings, and automated email templates.
+- Note: Some advanced features (e.g., direct email template editing, full white-label design automation, fully independent distributor admin modules) may be limited or partially implemented in this PoC. Most admin features can be tested with the admin@test.com account.
+
+- Admin settings: In the Admin UI under **Settings**, you can set the test recipient for PO/Quote emails (key: `ADMIN_EMAIL`).
+
+---
+
+## Additional Notes
+
+- The PoC site is for testing only; no real payments or shipping will occur.
+- If you have questions or encounter issues, please contact us anytime.
+- Feel free to try different roles and create new accounts for testing.
+
+### Email Notification Guide
+
+- For all major events (order, quote, shipping, etc.), notification emails are sent to the email address you registered with.
+- For admin testing, set your own email as `ADMIN_EMAIL` in the Admin UI **Settings** to receive test notification emails directly.
+- Please also check your spam/junk folder (especially for Gmail and similar services).
+
+### Stripe Test Card Information
+
+- For payment testing, use the following Stripe test card:
+  - Card number: `4242 4242 4242 4242`
+  - Expiry: Any future date (e.g., 12/34)
+  - CVC: Any 3 digits (e.g., 123)
+  - Postal code: Any 5 digits (e.g., 12345)
+- No real payment will be processed, so you can test safely.
+
+---
+
+Thank you!
